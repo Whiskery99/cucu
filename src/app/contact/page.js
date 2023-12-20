@@ -60,7 +60,7 @@ export default function Contact() {
             <div className="bg-[#fd961a] w-full py-8 px-5">
               <p className="text-xl text-black">Get in touch!</p>
             </div>
-            <form onSubmit={handleSubmit} className="space-y-6 p-4">
+            <form onSubmit={handleSubmit} className="space-y-6 p-4 mt-4">
               <div className="flex flex-col gap-2 items-start w-full">
                 <label>Name</label>
                 <input id="name"
