@@ -10,9 +10,9 @@ export default function Vision() {
       <>
          <div className="w-full">
             {/* // <BannerComponent title="Our Services" sub="HOME / SERVICES" /> */}
-            <div className="h-[25vh] flex flex-col items-center gap-6 justify-center overflow-hidden">
+            <div className="h-[25vh] bg-[#fd961a] flex flex-col items-center gap-6 justify-center overflow-hidden">
                {/* <BannerComponent title="HOME / TRACK PARCEL" /> */}
-               <p className="text-[#fd961a] text-base">Services</p>
+               <p className="text-[#fff] text-base">Services</p>
                <h1 className="text-white text-2xl">Our Services</h1>
                <div className="w-18 bg-[#fd961a] h-4"></div>
             </div>
