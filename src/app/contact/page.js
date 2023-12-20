@@ -55,7 +55,7 @@ export default function Contact() {
           <h1 className="text-white text-2xl">Contact Us</h1>
           <div className="w-18 bg-[#fd961a] h-4"></div>
         </div>
-        <div className="w-full px-4 flex flex-col md:flex-row items-center md:items-center md:justify-between gap-3 justify-center my-8 md:mt-10">
+        <div className="w-full px-4 flex flex-col md:flex-row items-center md:items-center  gap-3 justify-center my-8 md:mt-10">
           <div>
             <div className="bg-[#fd961a] w-full py-8 px-5">
               <p className="text-xl text-black">Get in touch!</p>
@@ -68,7 +68,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange} className="text-zinc-800 border-[0.5px] transistion-all ease-in-out duration-500 border-gray-300 focus:border-gray-700 rounded-lg px-4 py-3 w-full" type="text" placeholder="Enter your name" required />
               </div>
-              <button type="submit" className="disabled:opacity-50 flex items-center justify-center bg-[#fd961a] px-6 py-2 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md w-full">Track</button>
+              <button type="submit" className="disabled:opacity-50 flex items-center justify-center bg-[#fd961a] px-6 py-2 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md w-full">Submit</button>
             </form>
           </div>
           <div className="bg-[#fd961a] p-5 flex items-center text-black gap-4">
