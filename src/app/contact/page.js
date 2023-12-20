@@ -2,6 +2,7 @@
 
 import Footer from "@/components/Footer"
 import BannerComponent from "@/components/PageComponents/BannerComponent"
+import { HomeIcon } from "lucide-react";
 import { useState } from "react";
 
 
@@ -48,22 +49,42 @@ export default function Contact() {
   return (
     <>
       <div>
-        <div className="h-[25vh] overflow-hidden">
-          <BannerComponent title="HOME / TRACK PARCEL" />
+        <div className="h-[25vh] flex flex-col items-center gap-6 justify-center overflow-hidden">
+          {/* <BannerComponent title="HOME / TRACK PARCEL" /> */}
+          <p className="text-[#fd961a] text-base">Contact</p>
+          <h1 className="text-white text-2xl">Contact Us</h1>
+          <div className="w-18 bg-[#fd961a] h-4"></div>
         </div>
-        <div className="w-full px-6 flex flex-col items-start md:items-center md:justify-start gap-3 justify-end my-8 md:mt-10">
-          <form onSubmit={handleSubmit} className="space-y-6 w-[430px]">
-            <div className="flex flex-col gap-2 items-start w-full">
-              <label>Name</label>
-              <input id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange} className="text-zinc-800 border-[0.5px] transistion-all ease-in-out duration-500 border-gray-300 focus:border-gray-700 rounded-lg px-4 py-3 w-full" type="text" placeholder="Enter your name" required />
+        <div className="w-full px-4 flex flex-col md:flex-row items-center md:items-center md:justify-between gap-3 justify-center my-8 md:mt-10">
+          <div>
+            <div className="bg-[#fd961a] w-full py-8 px-5">
+              <p className="text-xl text-black">Get in touch!</p>
             </div>
-            <button type="submit" className="disabled:opacity-50 flex items-center justify-center bg-[#fd961a] px-6 py-2 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md w-full">Track</button>
-          </form>
+            <form onSubmit={handleSubmit} className="space-y-6 w-[430px]">
+              <div className="flex flex-col gap-2 items-start w-full">
+                <label>Name</label>
+                <input id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange} className="text-zinc-800 border-[0.5px] transistion-all ease-in-out duration-500 border-gray-300 focus:border-gray-700 rounded-lg px-4 py-3 w-full" type="text" placeholder="Enter your name" required />
+              </div>
+              <button type="submit" className="disabled:opacity-50 flex items-center justify-center bg-[#fd961a] px-6 py-2 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md w-full">Track</button>
+            </form>
+          </div>
+          <div className="bg-[#fd961a] p-5 flex items-center text-black gap-4">
+            <div className="flex items-center gap-4">
+              <div className="bg-white p-6 rounded-full">
+                <HomeIcon />
+              </div>
+              <h1>Opening Hours</h1>
+            </div>
+            <div className="flex flex-col gap-4 items-start">
+              <p>Monday - Friday</p>
+              <p>9AM - 6PM</p>
+            </div>
+          </div>
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   )
