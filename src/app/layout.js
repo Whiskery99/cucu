@@ -9,7 +9,7 @@ import Alert from '@/components/Alerts/WelcomeAlert';
 // const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'CargoSpleet | Logistics & Parcel delivery at its peak...',
+  title: 'Fratcht Logistics | Logistics & Parcel delivery at its peak...',
   description: '',
 
 };
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           </main>
           {/* <Footer /> */}
         </GlobalState>
-        <script src="//code.tidio.co/xu5x80n1qpwxrypqeeochchyeh4jsqwm.js" async></script>
+        // <script src="//code.tidio.co/xu5x80n1qpwxrypqeeochchyeh4jsqwm.js" async></script>
       </body>
     </html>
   );
