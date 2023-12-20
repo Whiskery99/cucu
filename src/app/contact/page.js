@@ -49,9 +49,9 @@ export default function Contact() {
   return (
     <>
       <div>
-        <div className="h-[25vh] flex flex-col items-center gap-6 justify-center overflow-hidden">
+        <div className="h-[25vh]  bg-[#fd961a] flex flex-col items-center gap-6 justify-center overflow-hidden">
           {/* <BannerComponent title="HOME / TRACK PARCEL" /> */}
-          <p className="text-[#fd961a] text-base">Contact</p>
+          <p className="text-[#000] text-base">Contact</p>
           <h1 className="text-white text-2xl">Contact Us</h1>
           <div className="w-18 bg-[#fd961a] h-4"></div>
         </div>
