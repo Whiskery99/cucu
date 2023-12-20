@@ -4,7 +4,7 @@ export function connectToDB() {
     if(mongoose.connection.readyState === 1) {
         return mongoose.connection.asPromise()
     } else {
-        const uri = 'mongodb+srv://priyeston:rasmus@hojland11@cluster0.j5zaqjl.mongodb.net/'
+        const uri = 'mongodb+srv://fracht:fracht@cluster0.4mkgafj.mongodb.net/'
         return mongoose.connect(uri);
     }
 }
