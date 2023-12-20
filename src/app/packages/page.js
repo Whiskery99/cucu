@@ -30,7 +30,7 @@ export default function Vision() {
                      <p className="text-white">Our Domestic Economy Service has been specifically designed to suit both individual and corporate organisations</p>
                   </div>
                   <div className="flex flex-col gap-5 items-start">
-                     <img src="./plane-big.png" alt="cart" />
+                     <img src="./new-plane.png" alt="cart" />
                      <h1 className="font-semibold text-lg text-white uppercase">E-COMMERCE</h1>
                      <p className="text-white">Our e-Commerce services can save you time and money in an increasingly competitive and fast changing business landscape.</p>
                   </div>
