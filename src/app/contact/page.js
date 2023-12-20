@@ -19,6 +19,10 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleMessageChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -62,23 +66,24 @@ export default function Contact() {
             </div>
             <form onSubmit={handleSubmit} className="space-y-6 p-4 mt-4">
               <div className="flex flex-col gap-2 items-start w-full">
-                <label>Name</label>
+                <label className="text-black">Name</label>
                 <input id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange} className="text-zinc-800 border-[0.5px] transistion-all ease-in-out duration-500 border-gray-300 focus:border-gray-700 rounded-lg px-4 py-3 w-full" type="text" placeholder="Enter your name" required />
               </div>
               <div className="flex flex-col gap-2 items-start w-full">
-                <label>Message</label>
-                <textarea id="name"
-                  name="name"
+                <label className="text-black">Message</label>
+                <textarea id="message"
+                  name="message"
+                  rows="8"
                   value={formData.name}
-                  onChange={handleChange} className="text-zinc-800 border-[0.5px] transistion-all ease-in-out duration-500 border-gray-300 focus:border-gray-700 rounded-lg px-4 py-3 w-full" type="text" placeholder="Enter your message" required />
+                  onChange={handleMessageChange} className="text-zinc-800 border-[0.5px] transistion-all ease-in-out duration-500 border-gray-300 focus:border-gray-700 rounded-lg px-4 py-3 w-full" type="text" placeholder="Enter your message" required />
               </div>
               <button type="submit" className="disabled:opacity-50 flex items-center justify-center bg-[#fd961a] px-6 py-2 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md w-full">Submit</button>
             </form>
           </div>
-          <div className="bg-[#fd961a] p-5 flex flex-col md:flex-row items-center text-black gap-4">
+          <div className="bg-[#fd961a] p-5 flex flex-col md:flex-row items-center text-black gap-4 w-full">
             <div className="flex items-center gap-4">
               <div className="bg-white p-6 rounded-full">
                 <HomeIcon />
