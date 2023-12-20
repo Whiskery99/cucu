@@ -56,7 +56,7 @@ function NavItems({ isModalView = false }) {
                             ))
                             :
                             navOptions.map((item) => (
-                                <a className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 md:p-0 text-black dark:text-white" key={item.id} href={item.path}>
+                                <a className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 md:p-0 text-white dark:text-white" key={item.id} href={item.path}>
                                     {item.label}
                                 </a>
                             ))
