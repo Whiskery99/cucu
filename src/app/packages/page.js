@@ -14,17 +14,17 @@ export default function Vision() {
                 <div className="px-6 flex flex-col md:flex-row items-center md:justify-between gap-10 justify-center my-8 md:my-20">
                     <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-15 px-4 md:px-8">
                        <div className="flex flex-col gap-10 items-start">
-                          <img src="" alt="bus" />
+                          <img src="/truck.png" alt="bus" />
                           <h1 className="font-semibold text-lg text-white uppercase">COURIER</h1>
                           <p className="text-white">For our same-day service, shipments received before 10am are guaranteed to be delivered to selected airport cities</p>
                        </div>
                        <div className="flex flex-col gap-10 items-start">
-                          <img src="" alt="car" />
+                          <img src="train.png" alt="car" />
                           <h1 className="font-semibold text-lg text-white uppercase">LOGISTICS</h1>
                           <p className="text-white">Our Domestic Economy Service has been specifically designed to suit both individual and corporate organisations</p>
                        </div>
                        <div className="flex flex-col gap-10 items-start">
-                          <img src="" alt="cart" />
+                          <img src="plane.png" alt="cart" />
                           <h1 className="font-semibold text-lg text-white uppercase">E-COMMERCE</h1>
                           <p className="text-white">Our e-Commerce services can save you time and money in an increasingly competitive and fast changing business landscape.</p>
                        </div>
