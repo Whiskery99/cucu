@@ -10,7 +10,7 @@ export default function Footer() {
                     <div className="mb-6 md:mb-0">
                         <a href="/" className="flex items-center">
                             <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 me-3" alt=" Logo" />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">CARGOSPLEET</span>
+                            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Fratcht Logistics</span>
                         </a>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -18,10 +18,10 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-[#fd961a] uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <a href="/" className="hover:underline text-white">CARGOSPLEET</a>
+                                    <a href="/" className="hover:underline text-white">Fratcht Logistics</a>
                                 </li>
                                 <li>
-                                    <a href="https://tailwindcss.com/" className="hover:underline text-white">Tailwind CSS</a>
+                                    <a href="https://deliveries.com/" className="hover:underline text-white">Deliveries</a>
                                 </li>
                             </ul>
                         </div>
@@ -53,17 +53,17 @@ export default function Footer() {
                 <div className="md:w-3/5">
                     {/* <p className="mb-2">CARGOSPLEET</p> */}
                     <p className="text-sm">
-                    CARGOSPLEET is one of the leading platforms in the United States offering binary options, Forex and spreads. Regulated by the CFTC and based in Manchester. It is also regulated by the IFSC of Belize, as well as the Cyprus Securities and Exchange Commission
+                    Fratcht Logistics is a provider of end-to-end logistics solutions to businesses and institutions across the globe. We are currently among the top 4 logistics providers in the country, operating from over 45 locations across the globe.
                     </p>
                     <div className="mt-4 text-lg mb-3 space-y-3">
                         <p>Contact: <span className="text-[#fd961a]">+12737474844</span></p>
                         <p>Address: <span className="text-[#fd961a]">Manchester M14 5td 6 Wilmslow Road, Rusholme.</span></p>
-                        <p>Email: <span className="text-[#fd961a]">support@cargospleet.online</span></p>
+                        <p>Email: <span className="text-[#fd961a]">support@frachtlogistics.com</span></p>
                     </div>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm text-gray-500 sm:text-center text-white">© 2023 <a href="/" className="hover:underline">CargoSpleet™</a>. All Rights Reserved.
+                    <span className="text-sm text-gray-500 sm:text-center text-white">© 2023 <a href="/" className="hover:underline">Fratcht Logistics™</a>. All Rights Reserved.
                     </span>
                     <div className="flex mt-4 sm:justify-center sm:mt-0">
                         <a href="#" className="text-[#fd961a] hover:text-gray-900 dark:hover:text-white">
