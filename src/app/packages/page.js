@@ -10,11 +10,11 @@ export default function Vision() {
       <>
          <div className="w-full">
             {/* // <BannerComponent title="Our Services" sub="HOME / SERVICES" /> */}
-            <div className="h-[25vh] bg-[#fd961a] flex flex-col items-center gap-6 justify-center overflow-hidden">
+            <div className="h-[18vh] bg-[#fd961a] flex flex-col items-center gap-6 justify-center overflow-hidden">
                {/* <BannerComponent title="HOME / TRACK PARCEL" /> */}
                <p className="text-[#000] text-base">Services</p>
                <h1 className="text-white text-2xl">Our Services</h1>
-               <div className="w-18 bg-[#fd961a] h-4"></div>
+               <div className="w-18 bg-[#fff] h-4"></div>
             </div>
             {/* <div className="text-center text-xl text-white"><h1>Our Services</h1></div> */}
             <div className="px-6 flex flex-col md:flex-row items-center md:justify-between gap-10 justify-center my-8 md:my-20">
