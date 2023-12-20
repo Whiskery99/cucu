@@ -1,6 +1,6 @@
 "use client"
 
-const Packages = () => {
+export default function Packages() {
     return (
         <div>
           <h1 className="text-white">Packages</h1>
