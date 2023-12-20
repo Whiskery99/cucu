@@ -12,11 +12,11 @@ export default function Vision() {
             {/* // <BannerComponent title="Our Services" sub="HOME / SERVICES" /> */}
             <div className="h-[25vh] flex flex-col items-center gap-6 justify-center overflow-hidden">
                {/* <BannerComponent title="HOME / TRACK PARCEL" /> */}
-               <p className="text-[#fd961a] text-base">Track Parcel</p>
-               <h1 className="text-white text-2xl">Track Your Item</h1>
+               <p className="text-[#fd961a] text-base">Services</p>
+               <h1 className="text-white text-2xl">Our Services</h1>
                <div className="w-18 bg-[#fd961a] h-4"></div>
             </div>
-            <div className="text-center text-xl text-white"><h1>Our Services</h1></div>
+            {/* <div className="text-center text-xl text-white"><h1>Our Services</h1></div> */}
             <div className="px-6 flex flex-col md:flex-row items-center md:justify-between gap-10 justify-center my-8 md:my-20">
                <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-15 px-4 md:px-8">
                   <div className="flex flex-col gap-10 items-start">
