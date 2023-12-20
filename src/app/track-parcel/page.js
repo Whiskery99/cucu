@@ -75,8 +75,14 @@ export default function Track() {
     return (
         <>
             <div>
-                <div className="h-[25vh] overflow-hidden">
+                {/* <div className="h-[25vh] overflow-hidden">
                     <BannerComponent title="HOME / TRACK PARCEL" />
+                </div> */}
+                <div className="h-[18vh]  bg-[#fd961a] flex flex-col items-center gap-6 justify-center overflow-hidden">
+                    {/* <BannerComponent title="HOME / TRACK PARCEL" /> */}
+                    <p className="text-[#000] text-base mt-3">Track</p>
+                    <h1 className="text-white text-2xl">Track Your Parcel</h1>
+                    <div className="w-18 bg-[#fff] h-4"></div>
                 </div>
                 <div className="w-full -mt-10 px-4 flex flex-col items-start md:items-center md:justify-start gap-3 justify-end md:mt-4">
                     <form onSubmit={handleTracking} className="space-y-6 w-full md:max-w-[450px]">

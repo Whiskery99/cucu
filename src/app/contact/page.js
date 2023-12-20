@@ -85,7 +85,7 @@ export default function Contact() {
           </div>
           <div className="flex flex-col gap-6 w-full">
             <div className="bg-[#fd961a] p-5 flex flex-col md:flex-row items-center text-black gap-4 w-full">
-              <div className="flex items-center gap-4">
+              <div className="flex justify-around items-center gap-4">
                 <div className="bg-white p-6 rounded-full">
                   <HomeIcon />
                 </div>
@@ -97,7 +97,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="bg-[#fd961a] p-5 flex flex-col md:flex-row items-center text-black gap-4 w-full">
-              <div className="flex items-center gap-4">
+              <div className="flex justify-around items-center gap-4">
                 <div className="bg-white p-6 rounded-full">
                   <MapIcon />
                 </div>
