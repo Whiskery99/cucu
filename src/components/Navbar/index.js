@@ -50,13 +50,13 @@ function NavItems({ isModalView = false }) {
                         :
                         isAdminView === "admin" ?
                             adminNavOptions.map((item) => (
-                                <a className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 md:p-0 text-white" key={item.id} href={item.path}>
+                                <a className="cursor-pointer block py-2 pl-3 pr-4 text-white md:p-0 text-white" key={item.id} href={item.path}>
                                     {item.label}
                                 </a>
                             ))
                             :
                             navOptions.map((item) => (
-                                <a className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 md:p-0 text-white dark:text-white" key={item.id} href={item.path}>
+                                <a className="cursor-pointer block py-2 pl-3 pr-4 md:p-0 text-white dark:text-white" key={item.id} href={item.path}>
                                     {item.label}
                                 </a>
                             ))
