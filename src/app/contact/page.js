@@ -2,7 +2,7 @@
 
 import Footer from "@/components/Footer"
 import BannerComponent from "@/components/PageComponents/BannerComponent"
-import { HomeIcon } from "lucide-react";
+import { HomeIcon, MapIcon } from "lucide-react";
 import { useState } from "react";
 
 
@@ -83,21 +83,36 @@ export default function Contact() {
               <button type="submit" className="disabled:opacity-50 flex items-center justify-center bg-[#fd961a] px-6 py-2 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md w-full">Submit</button>
             </form>
           </div>
-          <div className="bg-[#fd961a] p-5 flex flex-col md:flex-row items-center text-black gap-4 w-full">
-            <div className="flex items-center gap-4">
-              <div className="bg-white p-6 rounded-full">
-                <HomeIcon />
+          <div className="flex flex-col gap-6 w-full">
+            <div className="bg-[#fd961a] p-5 flex flex-col md:flex-row items-center text-black gap-4 w-full">
+              <div className="flex items-center gap-4">
+                <div className="bg-white p-6 rounded-full">
+                  <HomeIcon />
+                </div>
+                <h1>Opening Hours</h1>
               </div>
-              <h1>Opening Hours</h1>
+              <div className="flex flex-col gap-4 items-start">
+                <p>Monday - Friday</p>
+                <p>9AM - 6PM</p>
+              </div>
             </div>
-            <div className="flex flex-col gap-4 items-start">
-              <p>Monday - Friday</p>
-              <p>9AM - 6PM</p>
+            <div className="bg-[#fd961a] p-5 flex flex-col md:flex-row items-center text-black gap-4 w-full">
+              <div className="flex items-center gap-4">
+                <div className="bg-white p-6 rounded-full">
+                  <MapIcon />
+                </div>
+                <h1>Address</h1>
+              </div>
+              <div className="flex flex-col gap-4 items-start">
+                <p>467 Stutler Lane, Altoona</p>
+                <p>PA 16602</p>
+              </div>
             </div>
           </div>
+
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   )
 }
