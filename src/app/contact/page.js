@@ -91,7 +91,7 @@ export default function Contact() {
                 </div>
                 <h1>Opening Hours</h1>
               </div>
-              <div className="flex flex-col gap-4 items-start">
+              <div className="flex flex-col gap-1 items-start">
                 <p>Monday - Friday</p>
                 <p>9AM - 6PM</p>
               </div>
@@ -103,7 +103,7 @@ export default function Contact() {
                 </div>
                 <h1>Address</h1>
               </div>
-              <div className="flex flex-col gap-4 items-start">
+              <div className="flex flex-col gap-1 items-start">
                 <p>467 Stutler Lane, Altoona</p>
                 <p>PA 16602</p>
               </div>
