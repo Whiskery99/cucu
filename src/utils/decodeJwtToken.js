@@ -19,6 +19,7 @@ const decodeJwtToken = async (props) => {
     if (expirationTime - currentTime < 5 * 60 * 1000) {
       // Token is about to expire, generate a new refresh token
       const refreshToken = await generateRefreshToken();
+      console.log(refreshToken)
 
       // Include the refresh token in the response (you may want to store it securely)
       return {
