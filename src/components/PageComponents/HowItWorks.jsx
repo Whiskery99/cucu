@@ -50,7 +50,7 @@ const HowItWorks = () => {
               // data-aos="fade-up"
               // data-aos-delay="800"
             >
-              <a href="/register">Register Now</a>
+              <a href="/track-parcel">Track Parcel</a>
               <TbArrowUpRight className="w-6 h-6" />
             </button>
           </div>

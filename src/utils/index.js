@@ -69,34 +69,34 @@ export const navOptions = [
 export const adminNavOptions = [
   {
     id: 'admin',
-    label: 'All Users',
-    path: '/admin/users',
+    label: 'Create Parcel',
+    path: '/admin/create-parcel',
   },
   {
     id: 'admin',
-    label: 'All Plans',
-    path: '/admin/plans',
+    label: 'All Parcels',
+    path: '/admin/parcels',
   },
-  {
-    id: 'admin',
-    label: 'Withdrawals',
-    path: '/admin/withdraws',
-  },
-  {
-    id: 'admin',
-    label: 'Deposits',
-    path: '/admin/deposit',
-  },
-  {
-    id: 'invest',
-    label: 'Create Investments',
-    path: '/admin/create-plans',
-  },
-  {
-    id: 'copies',
-    label: 'Create Copiers',
-    path: '/admin/create-copiers',
-  },
+  // {
+  //   id: 'admin',
+  //   label: 'Withdrawals',
+  //   path: '/admin/withdraws',
+  // },
+  // {
+  //   id: 'admin',
+  //   label: 'Deposits',
+  //   path: '/admin/deposit',
+  // },
+  // {
+  //   id: 'invest',
+  //   label: 'Create Investments',
+  //   path: '/admin/create-plans',
+  // },
+  // {
+  //   id: 'copies',
+  //   label: 'Create Copiers',
+  //   path: '/admin/create-copiers',
+  // },
 ];
 
 export const registrationFormControls = [
