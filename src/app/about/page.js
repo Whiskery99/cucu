@@ -29,20 +29,18 @@ export default function About() {
                     </button>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-2 gap-4">
-                    <div class="grid gap-4">
-                        <div>
-                            <img class="h-auto max-w-full rounded-lg" src="./img-about-3.png" alt="" />
-                        </div>
-                        <div>
-                            <img class="h-auto max-w-full rounded-lg" src="./img-about-2.png" alt="" />
-                        </div>
-                        <div>
-                            <img class="h-auto max-w-full rounded-lg" src="./img-about-1.png" alt="" />
-                        </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./img-about-3.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./img-about-2.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./img-about-1.png" alt="" />
                     </div>
                 </div>
             </div>
-        <Footer />
+            <Footer />
         </div>
     )
 }
