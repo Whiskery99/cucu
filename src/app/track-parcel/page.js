@@ -84,7 +84,7 @@ export default function Track() {
                     <h1 className="text-white text-2xl">Track Your Parcel</h1>
                     <div className="w-18 bg-[#fff] h-4"></div>
                 </div>
-                <div className="w-full mt-10 px-4 flex flex-col items-start md:items-center md:justify-start gap-3 justify-end md:mt-10">
+                <div className="w-full mt-24 px-4 flex flex-col items-start md:items-center md:justify-start gap-3 justify-end md:mt-24">
                     <form onSubmit={handleTracking} className="space-y-6 w-full md:max-w-[450px]">
                         <div className="flex flex-col gap-2 items-start w-full">
                             <label>Tracking ID:</label>
