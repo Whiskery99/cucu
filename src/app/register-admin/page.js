@@ -84,7 +84,7 @@ export default function Register() {
               </p>
               {isRegistered ? (
                 <button
-                  onClick={() => router.push('/login')}
+                  onClick={() => router.push('/login-admin')}
                   className="disabled:opacity-50 inline-flex w-fit items-center justify-center bg-[#fd961a] px-5 py-2 text-base tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md mt-4"
                 >
                   Goto Login Now
