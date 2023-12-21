@@ -71,7 +71,7 @@ export default function Navbar() {
     const { showNavModal, setShowNavModal } = useContext(GlobalContext);
     const { user, isAuthUser, setIsAuthUser, setUser } = useContext(GlobalContext);
     const [isUsersAlert, setIsUserAlert] = useState(true)
-    UserDetailsContext();
+    // UserDetailsContext();
     const router = useRouter();
     const pathName = usePathname();
 
