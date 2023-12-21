@@ -7,7 +7,7 @@ export default function About() {
     return (
         <div className="w-full">
             {/* // <BannerComponent title="Our Services" sub="HOME / SERVICES" /> */}
-            <div className="h-[18vh] bg-[#fd961a] flex flex-col items-center gap-2 justify-center overflow-hidden">
+            <div className="h-auto bg-[#fd961a] flex flex-col items-center gap-2 py-4 justify-center overflow-hidden">
                 {/* <BannerComponent title="HOME / TRACK PARCEL" /> */}
                 {/* <p className="text-[#000] text-base mt-5">Who We Are</p> */}
                 <h1 className="text-white text-3xl">About Us</h1>
@@ -37,7 +37,7 @@ export default function About() {
                             <img class="h-auto max-w-full rounded-lg" src="./img-about-2.png" alt="" />
                         </div>
                         <div>
-                            <img class="h-auto max-w-full rounded-lg" src="./img-about-3.png" alt="" />
+                            <img class="h-auto max-w-full rounded-lg" src="./img-about-1.png" alt="" />
                         </div>
                     </div>
                 </div>
