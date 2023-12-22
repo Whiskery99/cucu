@@ -52,5 +52,6 @@ export const config = {
     '/api/user/fund-balance/:path*',
     '/api/user/create-withdraw/:path*',
     '/api/admin/:path*',
+    '/api/user/refreshToken/:path*',
   ],
 };

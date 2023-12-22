@@ -3,12 +3,11 @@ import { SignJWT } from 'jose';
 export const generateRefreshToken = async () => {
   try {
     const refreshToken = await new SignJWT({})
-      .setSubject('refresh-token')
-      .setExpirationTime('30m') // Set expiration time to 30 minutes
-      .sign({
-        key: jwtKey, // Your secret key
-        alg: 'HS256', // Algorithm for signing the token
-      });
+    const token = jwt.sign(
+      { id: checkUser?._id, role: checkUser?.role },
+      jwtKey,
+      { expiresIn: '1h' }
+    );
 
     return refreshToken;
   } catch (error) {

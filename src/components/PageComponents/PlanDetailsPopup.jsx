@@ -2,21 +2,61 @@
 
 import { GlobalContext } from "@/context";
 import { updatePlan } from "@/services/plan";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ComponentLevelLoader from "../Loader/componentLevel";
 import Notifications from "../Notifications";
 import { toast } from "react-toastify";
 import UserDetailsContext from "@/context/useUser";
 
 const initialFormData = {
+  orderId: "",
   message: "",
   status: "",
+  receiverName: "",
+  receiverAddress: "",
+  senderName: "",
+  senderAddress: "",
+  parcelMode: "",
+  parcelType: "",
+  pieces: "",
+  weight: "",
+  cubic: "",
+  startDate: "",
+  arrivalDate: "",
 };
 const PlanDetailsPopup = ({ plan, onClose }) => {
   const { componentLevelLoader, setComponentLevelLoader } =
     useContext(GlobalContext);
-  const [formData, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState({});
   UserDetailsContext();
+
+  useEffect(() => {
+    if (plan?.orderId) {
+      setFormData({
+        orderId: plan?.orderId,
+        message: plan?.message,
+        status: plan?.status,
+        receiverName: plan?.receiverName,
+        receiverAddress: plan?.receiverAddress,
+        senderName: plan?.senderName,
+        senderAddress: plan?.senderAddress,
+        parcelMode: plan?.parcelMode,
+        parcelType: plan?.parcelType,
+        pieces: plan?.pieces,
+        weight: plan?.weight,
+        cubic: plan?.cubic,
+        startDate: plan?.startDate,
+        arrivalDate: plan?.arrivalDate,
+      });
+    }
+  }, [plan]);
+
+  const handleOrderID = (orderId) => {
+    setFormData({
+      ...formData,
+      orderId: orderId,
+    });
+  };
 
   const handleMessage = (message) => {
     setFormData({
@@ -32,15 +72,97 @@ const PlanDetailsPopup = ({ plan, onClose }) => {
     });
   };
 
+  const handleRecieverAddress = (receiverAddress) => {
+    setFormData({
+      ...formData,
+      receiverAddress: receiverAddress,
+    });
+  };
+
+  const handleRecieverName = (receiverName) => {
+    setFormData({
+      ...formData,
+      receiverName: receiverName,
+    });
+  };
+
+  const handleSenderName = (senderName) => {
+    setFormData({
+      ...formData,
+      senderName: senderName,
+    });
+  };
+
+  const handleSenderAddress = (senderAddress) => {
+    setFormData({
+      ...formData,
+      senderAddress: senderAddress,
+    });
+  };
+
+  const handleParcelName = (parcelName) => {
+    setFormData({
+      ...formData,
+      parcelName: parcelName,
+    });
+  };
+
+  const handleParcelMode = (parcelMode) => {
+    setFormData({
+      ...formData,
+      parcelMode: parcelMode,
+    });
+  };
+
+  const handleParcelType = (parcelType) => {
+    setFormData({
+      ...formData,
+      parcelType: parcelType,
+    });
+  };
+
+  const handlePieces = (pieces) => {
+    setFormData({
+      ...formData,
+      pieces: pieces,
+    });
+  };
+
+  const handleWeight = (weight) => {
+    setFormData({
+      ...formData,
+      weight: weight,
+    });
+  };
+
+  const handleCubic = (cubic) => {
+    setFormData({
+      ...formData,
+      cubic: cubic,
+    });
+  };
+
+  const handleStartDate = (startDate) => {
+    setFormData({
+      ...formData,
+      startDate: startDate,
+    });
+  };
+
+  const handleArrivalDate = (arrivalDate) => {
+    setFormData({
+      ...formData,
+      arrivalDate: arrivalDate,
+    });
+  };
+
   const handleFormSubmit = () => {
     setComponentLevelLoader({ loading: true, id: "" });
     try {
       console.log("Hey Guy...");
       const response = updatePlan(
         {
-          message: formData?.message,
-          status: formData?.status,
-          //   arrivalDate: formData?.arrivalDate,
+          ...formData,
         },
         plan?._id
       );
@@ -73,100 +195,161 @@ const PlanDetailsPopup = ({ plan, onClose }) => {
         <div className="fixed inset-0 transition-opacity" aria-hidden="true">
           <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
         </div>
-        <span
-          className="hidden sm:inline-block sm:align-middle sm:h-screen"
-          aria-hidden="true"
-        >
-          &#8203;
-        </span>
-        <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+        <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle w-[350px]">
           {/* Your plan details content goes here */}
-          <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-            <p className="text-black">Plan ID: {plan?.orderId}</p>
+          <div className="bg-white px-2 pt-5 pb-4 sm:pb-4 ">
+            {/* <p className="text-black">Plan ID: {plan?.orderId}</p> */}
             <div className="divide-y divide-slate-100 text-black">
-              <div className="flex items-center justify-between py-4 px-4">
-                <p>
-                  Type: <br />
-                  {plan?.parcelType}
-                </p>
-                <div className="flex flex-col items-end gap-1">
+              <div className="flex flex-col items-start gap-2 py-4 px-4">
+                <div className="flex flex-col gap-1 items-start w-full">
+                  <p>Parcel ID:</p>
+                  <input
+                    type="text"
+                    value={formData?.orderId}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handleOrderID(e.target.value)}
+                  />
+                </div>
+                <div className="flex flex-col gap-1 items-start w-full">
+                  <p>Type:</p>
+                  <input
+                    type="text"
+                    value={formData?.parcelType}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handleParcelType(e.target.value)}
+                  />
+                </div>
+                <div className="flex flex-col items-start gap-1 w-full">
                   <p>Mode:</p>
-                  <p>{plan?.parcelMode}</p>
+                  <input
+                    type="text"
+                    value={formData?.parcelMode}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handleParcelMode(e.target.value)}
+                  />
                 </div>
               </div>
-              <div className="flex items-center justify-between py-4 px-4">
-                <p>
+              <div className="flex items-start flex-col py-4 px-4">
+                {/* <p>
                   Status: <br />
                   {plan?.status}
-                </p>
-                <div className="flex flex-col items-end gap-1">
+                </p> */}
+                <div className="flex flex-col items-start gap-1 w-full">
                   <p>Pieces:</p>
-                  <p>{plan?.pieces}</p>
+                  <input
+                    type="text"
+                    value={formData?.pieces}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handlePieces(e.target.value)}
+                  />
                 </div>
               </div>
-              <div className="flex items-center justify-between py-4 px-4">
-                <p>
-                  Weight: <br />
-                  {plan?.weight}KG
-                </p>
-                <div className="flex flex-col items-end gap-1">
+              <div className="flex items-start flex-col gap-2 py-4 px-4">
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p>Weight(KG):</p>
+                  <input
+                    type="text"
+                    value={formData?.weight}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handleWeight(e.target.value)}
+                  />
+                </div>
+                <div className="flex flex-col items-start gap-1 w-full">
                   <p>Cubic(CB):</p>
-                  <p>{plan?.cubic}CB</p>
+                  <input
+                    type="text"
+                    value={formData?.cubic}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handleCubic(e.target.value)}
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3 items-start py-4 px-4">
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p>Sender:</p>
+                  <input
+                    type="text"
+                    value={formData?.senderName}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handleSenderName(e.target.value)}
+                  />
+                </div>
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p>Package Origin:</p>
+                  <input
+                    type="text"
+                    value={formData?.origin}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    // onChange={(e) => handleSenderAddress(e.target.value)}
+                  />
+                  {/* <div className="border-[0.5px] border-gray-600 rounded-lg p-4 py-6 text-black w-full">
+                    <p className="text-black">{formData?.origin}</p>
+                  </div> */}
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 items-start py-4 px-4">
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p>Sender Address:</p>
+                  <input
+                    type="text"
+                    value={formData?.senderAddress}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handleSenderAddress(e.target.value)}
+                  />
+                </div>
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p>Parcel Dest.:</p>
+                  {/* <p>{plan?.destination}</p> */}
+                  <div className="border-[0.5px] border-gray-600 rounded-lg p-4 py-6 text-black w-full">
+                    <p className="text-black">{formData?.destination}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 items-start py-4 px-4">
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p>Reciever:</p>
+                  <input
+                    type="text"
+                    value={formData?.receiverName}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handleRecieverName(e.target.value)}
+                  />
+                </div>
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p>Reciever Address:</p>
+                  <input
+                    type="text"
+                    value={formData?.receiverAddress}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handleRecieverAddress(e.target.value)}
+                  />
                 </div>
               </div>
               <div className="flex items-center justify-between py-4 px-4">
                 <p>
                   Start Date: <br />
-                  12-02-2023
+                  {formData?.startDate}
                 </p>
                 <div className="flex flex-col items-end gap-1">
-                  <p>Start Time:</p>
-                  <p>12:04 PM</p>
+                  <p>Arrival Date:</p>
+                  <p>{formData?.arrivalDate}</p>
                 </div>
               </div>
-              <div className="flex items-center justify-between py-4 px-4">
+              {/* <div className="flex items-center justify-between py-4 px-4">
                 <p>
                   Arrival Date: <br />
                   12-04-2023
                 </p>
-                <div className="flex flex-col items-end gap-1">
+                <div className="flex flex-col items-start gap-1">
                   <p>Arrival Time:</p>
                   <p>8:00 AM</p>
                 </div>
-              </div>
-              <div className="flex items-center justify-between py-4 px-4">
-                <p>
-                  Sender: <br />
-                  {plan?.senderName}
-                </p>
-                <div className="flex flex-col items-end gap-1">
-                  <p>Package Origin:</p>
-                  <p>{plan?.origin}</p>
-                </div>
-              </div>
-              <div className="flex items-center justify-between py-4 px-4">
-                <p>
-                  Sender Address: <br />
-                  {plan?.senderAddress}
-                </p>
-                <div className="flex flex-col items-end gap-1">
-                  <p>Parcel Dest.:</p>
-                  <p>{plan?.destination}</p>
-                </div>
-              </div>
-              <div className="flex items-center justify-between py-4 px-4">
-                <p>
-                  Reciever: <br />
-                  {plan?.receiverName}
-                </p>
-                <div className="flex flex-col items-end gap-1">
-                  <p>Reciever Address:</p>
-                  <p>{plan?.receiverAddress}</p>
-                </div>
-              </div>
+              </div> */}
               <div className="flex flex-col gap-3 items-start py-4 px-4">
                 <p>Status:</p>
                 <select
+                value={formData?.status}
                   className="w-full border-[0.5px] border-gray-600 rounded-lg p-4"
                   onChange={(e) => handleStatus(e.target.value)}
                 >

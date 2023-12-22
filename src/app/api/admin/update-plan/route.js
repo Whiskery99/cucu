@@ -77,11 +77,47 @@ export async function PUT(req) {
             });
           }
 
+          if(orderId) {
+            plan.orderId = orderId;
+          }
           if(message) {
             plan.message = message;
           }
           if(status) {
             plan.status = status;
+          }
+          if(parcelMode) {
+            plan.parcelMode = parcelMode;
+          }
+          if(parcelType) {
+            plan.parcelType = parcelType;
+          }
+          if(senderName) {
+            plan.senderName = senderName;
+          }
+          if(receiverName) {
+            plan.receiverName = receiverName;
+          }
+          if(senderAddress) {
+            plan.senderAddress = senderAddress;
+          }
+          if(receiverAddress) {
+            plan.receiverAddress = receiverAddress;
+          }
+          if(pieces) {
+            plan.pieces = pieces;
+          }
+          if(weight) {
+            plan.weight = weight;
+          }
+          if(cubic) {
+            plan.cubic = cubic;
+          }
+          if(startDate) {
+            plan.startDate = startDate;
+          }
+          if(arrivalDate) {
+            plan.arrivalDate = arrivalDate;
           }
 
           await plan.save();

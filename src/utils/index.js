@@ -68,20 +68,20 @@ export const navOptions = [
 
 export const adminNavOptions = [
   {
-    id: 'admin',
+    id: 'parcels',
+    label: 'All Parcels',
+    path: '/admin/parcels',
+  },
+  {
+    id: 'parcel',
     label: 'Create Parcel',
     path: '/admin/create-parcel',
   },
   {
     id: 'admin',
-    label: 'All Parcels',
-    path: '/admin/parcels',
+    label: 'All Admins',
+    path: '/admin/users',
   },
-  // {
-  //   id: 'admin',
-  //   label: 'Withdrawals',
-  //   path: '/admin/withdraws',
-  // },
   // {
   //   id: 'admin',
   //   label: 'Deposits',
@@ -98,6 +98,7 @@ export const adminNavOptions = [
   //   path: '/admin/create-copiers',
   // },
 ];
+
 
 export const registrationFormControls = [
   {
