@@ -20,7 +20,7 @@ const UserDetailsContext = async () => {
                     },
                 });
 
-                console.log(response);
+                // console.log(response);
                 const { success, user: fetchedUser } = response.data;
 
                 if (success) {
@@ -28,7 +28,7 @@ const UserDetailsContext = async () => {
                     setUser(fetchedUser);
                 } else {
                     // Handle the case where fetching user failed
-                    console.error('Failed to fetch user details from context:', response.data.message);
+                    console.error('Failed to fetch user details:', response.data.message);
                 }
             }
             fetchLoginUser()

@@ -5,6 +5,7 @@ export const fetchLoginUser = async () => {
     try {
         console.log(Cookies.get('token'))
         const token = Cookies.get('token');
+        
 
         // const response = fetch('/api/user/get-user/', {
         //     method: 'GET',

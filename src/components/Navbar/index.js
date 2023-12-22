@@ -3,12 +3,13 @@
 import { GlobalContext } from "@/context";
 import { adminNavOptions, dashboardNavLinks, navOptions } from "@/utils";
 import Image from "next/image";
-import { Fragment, useContext, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import CommonModal from "../CommonModal";
 import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
 import UserDetailsContext from "@/context/useUser";
 import UserAlerts from "@/utils/usersAlert";
+import fetchNewAccessToken from "@/utils/fetchNewAccessToken";
 
 // const isAdminView = false;
 // const isAuthUser = true;
@@ -43,20 +44,20 @@ function NavItems({ isModalView = false }) {
                 {
                     isAdminView === "client" ?
                         dashboardNavLinks.map((item) => (
-                            <a className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 md:p-0 text-white" key={item.id} href={item.path}>
+                            <a className="cursor-pointer block py-2 pl-3 pr-4 md:p-0 text-black" key={item.id} href={item.path}>
                                 {item.label}
                             </a>
                         ))
                         :
                         isAdminView === "admin" ?
                             adminNavOptions.map((item) => (
-                                <a className="cursor-pointer block py-2 pl-3 pr-4 text-white md:p-0 text-white" key={item.id} href={item.path}>
+                                <a className="cursor-pointer block py-2 pl-3 pr-4 md:p-0 text-black" key={item.id} href={item.path}>
                                     {item.label}
                                 </a>
                             ))
                             :
                             navOptions.map((item) => (
-                                <a className="cursor-pointer block py-2 pl-3 pr-4 md:p-0 text-white dark:text-white" key={item.id} href={item.path}>
+                                <a className="cursor-pointer block py-2 pl-3 pr-4 md:p-0 text-black" key={item.id} href={item.path}>
                                     {item.label}
                                 </a>
                             ))
@@ -71,7 +72,8 @@ export default function Navbar() {
     const { showNavModal, setShowNavModal } = useContext(GlobalContext);
     const { user, isAuthUser, setIsAuthUser, setUser } = useContext(GlobalContext);
     const [isUsersAlert, setIsUserAlert] = useState(true)
-    // UserDetailsContext();
+    UserDetailsContext();
+    // fetchNewAccessToken();
     const router = useRouter();
     const pathName = usePathname();
 
@@ -86,6 +88,15 @@ export default function Navbar() {
         window.location.reload()
     }
 
+    useEffect(() => {
+        console.log('Hello world')
+        if(Cookies.get('token')){
+            fetchNewAccessToken();
+
+            console.log('Checking if token is here')
+        }
+    }, [])
+
     const isAdminView = pathName.includes("admin")
     // const isAdminView = user?.role;
     // console.log(isAdminView)
@@ -98,7 +109,7 @@ export default function Navbar() {
                 <div className="w-screen flex flex-wrap items-center justify-between mx-auto p-4">
                     <div onClick={() => router.push('/')} className="flex items-center cursor-pointer mr-2">
                         {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 w-auto mr-1.5" alt=" Logo" /> */}
-                        <span className="self-center text-lg md:text-xl font-semibold text-white">Fratcht Logistics</span>
+                        <span className="self-center text-lg md:text-xl font-semibold text-white">CargoSpleet</span>
                     </div>
 
                     <div className="flex items-center md:order-2 gap-2">
@@ -119,9 +130,10 @@ export default function Navbar() {
                         {
                             isAuthUser ? <button onClick={handleLogout} className="mt-1.5 inline-block bg-[#fd961a] py-3 px-5 text-sm font-medium tracking-wide text-white rounded-md">Go Back</button> : <a href='/track-parcel' className='text-[#fff] text-base md:text-lg bg-[#fd961a] hover:bg-transparent transition-all ease-in-out duration-500 border-[2px] border-[#fd961a] borer-solid py-3 px-5'>Track Parcel</a>
                         }
-                        {/* <button onClick={() => setShowNavModal(!showNavModal)} className="md:hidden rounded-lg p-2 bg-[#fd961a] transition-all duration-500 focus:outline-none focus:ring-2">
+                        {/* <button onClick={testToken}>Test</button> */}
+                        <button onClick={() => setShowNavModal(!showNavModal)} className="md:hidden rounded-lg p-2 bg-[#fd961a] transition-all duration-500 focus:outline-none focus:ring-2">
                             <Image src="/menu.png" alt="menu icon" width={30} height={30} />
-                        </button> */}
+                        </button>
                     </div>
                     <NavItems user={user} isAdminView={isAdminView} router={router} />
                 </div>

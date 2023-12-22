@@ -53,7 +53,7 @@ export async function POST(req) {
     const token = jwt.sign(
       { id: checkUser?._id, role: checkUser?.role },
       jwtKey,
-      { expiresIn: '1h' }
+      { expiresIn: '30m' }
     );
 
     // console.log(checkUser);
