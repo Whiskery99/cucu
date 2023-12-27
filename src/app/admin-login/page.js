@@ -56,7 +56,7 @@ export default function Login() {
             setIsAuthUser(true)
             setUser(data?.finalResult?.user)
             if(data?.finalResult?.user?.role === "client"){
-                router.push('/dashboard')
+                router.push('/')
             } else{
                 router.push('/admin')
             }
@@ -111,7 +111,7 @@ export default function Login() {
                                     ) : null
                                 )}
                             </div>
-                            <p className="text-sm text-center mt-3">Don&apos;t have an account? <a href="/register" className="font-semibold underline cursor-pointer">Register</a></p>
+                            <p className="text-sm text-center mt-3 text-black">Don&apos;t have an account? <a href="/register-admin" className="font-semibold underline cursor-pointer">Register</a></p>
                             <button className="disabled:opacity-50 inline-flex w-fit items-center justify-center bg-[#fd961a] px-5 py-3 text-base tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md mt-4" disabled={!isFormValid()}
                                 onClick={handleLogin}>
                                 {componentLevelLoader && componentLevelLoader.loading ? <ComponentLevelLoader

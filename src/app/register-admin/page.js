@@ -64,7 +64,7 @@ export default function Register() {
   }
 
   useEffect(() => {
-    if (isAuthUser) router.push('/dashboard');
+    if (isAuthUser) router.push('/admin');
   }, [isAuthUser]);
 
   return (
@@ -84,7 +84,7 @@ export default function Register() {
               </p>
               {isRegistered ? (
                 <button
-                  onClick={() => router.push('/login-admin')}
+                  onClick={() => router.push('/admin-login')}
                   className="disabled:opacity-50 inline-flex w-fit items-center justify-center bg-[#fd961a] px-5 py-2 text-base tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md mt-4"
                 >
                   Goto Login Now
@@ -109,7 +109,7 @@ export default function Register() {
                     ) : null
                   )}
                   <div className="flex flex-col items-center">
-                    <p className="text-sm text-center mt-3">
+                    <p className="text-sm text-center mt-3 text-black">
                       On signing up, means you&apos;ve accepted our Terms of
                       Service and Privacy Policy.
                     </p>
@@ -131,7 +131,7 @@ export default function Register() {
                     <p className="text-sm text-center mt-3">
                       Already have an account?{' '}
                       <a
-                        href="/login"
+                        href="/admin-login"
                         className="font-semibold underline cursor-pointer"
                       >
                         Login
