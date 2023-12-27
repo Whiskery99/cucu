@@ -143,25 +143,16 @@ export default function Track() {
                                             </div>
                                         </div>
                                         <div className="flex items-center justify-between py-4 px-4">
-                                            <p>
+                                          <p>
                                                 Start Date: <br />
-                                                12-02-2023
-                                            </p>
-                                            <div className="flex flex-col items-end gap-1">
-                                                <p>Start Time:</p>
-                                                <p>12:04 PM</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center justify-between py-4 px-4">
-                                            <p>
-                                                Arrival Date: <br />
-                                                12-04-2023
-                                            </p>
-                                            <div className="flex flex-col items-end gap-1">
-                                                <p>Arrival Time:</p>
-                                                <p>8:00 AM</p>
-                                            </div>
-                                        </div>
+                                                {selectedPlan?.startDate}
+                                           </p>
+                <div className="flex flex-col items-end gap-1">
+                  <p>Arrival Date:</p>
+                  <p>{selectedPlan?.arrivalDate}</p>
+                </div>
+              </div>
+                                        
                                         <div className="flex items-center justify-between py-4 px-4">
                                             <p>
                                                 Sender: <br />
