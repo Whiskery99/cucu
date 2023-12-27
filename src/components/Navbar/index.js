@@ -128,7 +128,7 @@ export default function Navbar() {
                             user?.role === 'client' ? <button onClick={() => router.push('/dashboard')} className="mt-1.5 inline-block bg-[#fd961a] py-3 px-5 text-xs font-medium tracking-wide text-white">View Profile</button> : ""
                         } */}
                         {
-                            isAuthUser ? <button onClick={handleLogout} className="mt-1.5 inline-block bg-[#fd961a] py-3 px-5 text-sm font-medium tracking-wide text-white rounded-md">Go Back</button> : <a href='/track-parcel' className='text-[#fff] text-sm md:text-lg bg-[#fd961a] hover:bg-transparent transition-all ease-in-out duration-500 border-[2px] border-[#fd961a] borer-solid p-2'>Track</a>
+                            isAuthUser ? <button onClick={handleLogout} className="mt-1.5 inline-block bg-[#fd961a] py-3 px-5 text-sm font-medium tracking-wide text-white rounded-md">Go Back</button> : <a href='/track-parcel' className='text-[#fff] text-sm md:text-lg bg-[#fd961a] hover:bg-transparent transition-all ease-in-out duration-500 border-[2px] border-[#fd961a] borer-solid p-2 rounded-lg'>Track</a>
                         }
                         {/* <button onClick={testToken}>Test</button> */}
                         <button onClick={() => setShowNavModal(!showNavModal)} className="md:hidden rounded-lg p-2 bg-[#fd961a] transition-all duration-500 focus:outline-none focus:ring-2">
