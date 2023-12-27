@@ -326,14 +326,32 @@ const PlanDetailsPopup = ({ plan, onClose }) => {
                   />
                 </div>
               </div>
-              <div className="flex items-center justify-between py-4 px-4">
-                <p>
+              <div className="flex flex-col gap-2 items-start py-4 px-4">
+                {/* <p>
                   Start Date: <br />
                   {formData?.startDate}
-                </p>
-                <div className="flex flex-col items-end gap-1">
+                </p> */}
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p>Start Date:</p>
+                  <input
+                    type="date"
+                    value={formData?.startDate}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handleStartDate(e.target.value)}
+                  />
+                </div>
+                {/* <div className="flex flex-col items-end gap-1">
                   <p>Arrival Date:</p>
                   <p>{formData?.arrivalDate}</p>
+                </div> */}
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p>Arrival Date:</p>
+                  <input
+                    type="date"
+                    value={formData?.arrivalDate}
+                    className="w-full border-[0.5px] border-gray-600 rounded-lg p-4 placeholder:text-black text-black"
+                    onChange={(e) => handleArrivalDate(e.target.value)}
+                  />
                 </div>
               </div>
               {/* <div className="flex items-center justify-between py-4 px-4">
