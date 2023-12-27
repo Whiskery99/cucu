@@ -112,73 +112,73 @@ export default function Track() {
                                 <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 ">
                                     <p className="text-black">Plan ID: {selectedPlan?.orderId}</p>
                                     <div className="divide-y divide-slate-100 text-black">
-                                        <div className="flex items-center justify-between py-4 px-4">
-                                            <p>
+                                        <div className="flex items-start flex-col gap-2 py-4 px-4">
+                                            <p className="w-full py-2">
                                                 Type: <br />
                                                 {selectedPlan?.parcelType}
                                             </p>
-                                            <div className="flex flex-col items-end gap-1">
+                                            <div className="flex flex-col items-end gap-1 w-full py-1">
                                                 <p>Mode:</p>
                                                 <p>{selectedPlan?.parcelMode}</p>
                                             </div>
                                         </div>
-                                        <div className="flex items-center justify-between py-4 px-4">
-                                            <p>
+                                        <div className="flex items-start flex-col gap-2 py-4 px-4">
+                                            <p className="w-ful py-2">
                                                 Status: <br />
                                                 {selectedPlan?.status}
                                             </p>
-                                            <div className="flex flex-col items-end gap-1">
+                                            <div className="flex flex-col items-end gap-1 w-full py-1">
                                                 <p>Pieces:</p>
                                                 <p>{selectedPlan?.pieces}</p>
                                             </div>
                                         </div>
-                                        <div className="flex items-center justify-between py-4 px-4">
-                                            <p>
+                                        <div className="flex items-start flex-col gap-2 py-4 px-4">
+                                            <p className="w-ful py-2">
                                                 Weight: <br />
                                                 {selectedPlan?.weight}KG
                                             </p>
-                                            <div className="flex flex-col items-end gap-1">
+                                            <div className="flex flex-col items-end gap-1 w-full py-1">
                                                 <p>Cubic(CB):</p>
                                                 <p>{selectedPlan?.cubic}CB</p>
                                             </div>
                                         </div>
-                                        <div className="flex items-center justify-between py-4 px-4">
-                                          <p>
+                                        <div className="flex items-start flex-col gap-2 py-4 px-4">
+                                            <p className="w-ful py-2">
                                                 Start Date: <br />
                                                 {selectedPlan?.startDate}
-                                           </p>
-                <div className="flex flex-col items-end gap-1">
-                  <p>Arrival Date:</p>
-                  <p>{selectedPlan?.arrivalDate}</p>
-                </div>
-              </div>
-                                        
-                                        <div className="flex items-center justify-between py-4 px-4">
-                                            <p>
+                                            </p>
+                                            <div className="flex flex-col items-end gap-1 w-full py-1">
+                                                <p>Arrival Date:</p>
+                                                <p>{selectedPlan?.arrivalDate}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-start flex-col gap-2 py-4 px-4">
+                                            <p className="w-ful py-2">
                                                 Sender: <br />
                                                 {selectedPlan?.senderName}
                                             </p>
-                                            <div className="flex flex-col items-end gap-1">
+                                            <div className="flex flex-col items-end gap-1 w-full py-1">
                                                 <p>Package Origin:</p>
                                                 <p>{selectedPlan?.origin}</p>
                                             </div>
                                         </div>
-                                        <div className="flex items-center justify-between py-4 px-4">
-                                            <p>
+                                        <div className="flex items-start flex-col gap-2 py-4 px-4">
+                                            <p className="w-ful py-2">
                                                 Sender Address: <br />
                                                 {selectedPlan?.senderAddress}
                                             </p>
-                                            <div className="flex flex-col items-end gap-1">
+                                            <div className="flex flex-col items-end gap-1 w-full py-1">
                                                 <p>Parcel Dest.:</p>
                                                 <p>{selectedPlan?.destination}</p>
                                             </div>
                                         </div>
-                                        <div className="flex items-center justify-between py-4 px-4">
-                                            <p>
+                                        <div className="flex items-start flex-col gap-2 py-4 px-4">
+                                            <p className="w-ful py-2">
                                                 Reciever: <br />
                                                 {selectedPlan?.receiverName}
                                             </p>
-                                            <div className="flex flex-col items-end gap-1">
+                                            <div className="flex flex-col items-end gap-1 w-full py-1">
                                                 <p>Reciever Address:</p>
                                                 <p>{selectedPlan?.receiverAddress}</p>
                                             </div>
