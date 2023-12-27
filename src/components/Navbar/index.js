@@ -108,7 +108,7 @@ export default function Navbar() {
             <nav className="relative bg-[#111] fixed w-full z-20 top-0 left-0 border-b border-gray-200">
                 <div className="w-screen flex flex-wrap items-center justify-between mx-auto p-4">
                     <div onClick={() => router.push('/')} className="flex items-center cursor-pointer mr-2">
-                        <img src="./logo.png" className="h-8 w-auto mr-1" alt=" Logo" />
+                        <img src="./logos.png" className="h-8 w-auto mr-1" alt=" Logo" />
                         <span className="self-center text-lg md:text-xl font-semibold text-white">FrachtLogistics</span>
                     </div>
 
