@@ -58,7 +58,7 @@ export default function Footer() {
                     <div className="mt-4 text-lg mb-3 space-y-3">
                         <p>Contact: <span className="text-[#fd961a]">+12737474844</span></p>
                         <p>Address: <span className="text-[#fd961a]">Manchester M14 5td 6 Wilmslow Road, Rusholme.</span></p>
-                        <p>Email: <span className="text-[#fd961a]">support@frachtlogistics.com</span></p>
+                        <a href="mailto:support@frachtlogistics.com">Email: <span className="text-[#fd961a]">support@frachtlogistics.com</span></a>
                     </div>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />

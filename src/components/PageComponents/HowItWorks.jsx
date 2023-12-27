@@ -14,7 +14,7 @@ const HowItWorks = () => {
         <div className="text-center">
           <p className="text-gray-300 mb-3">Our Operation</p>
           <h1 className="text-2xl md:text-6xl lg:text-5xl font-bold mb-5 lg:mb-6 text-white -tracking-wide md:w-3/4 lg:3/5">
-            HOW CARGOSPLEET WORKS
+            HOW FRACHTLOGISTICS WORKS
           </h1>
         </div>
         <div className="flex items-center w-full md:justify-center md:gap-20 md:items-center flex-col md:flex-row  mx-auto justify-center text-white px-6">
