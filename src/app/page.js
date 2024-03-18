@@ -11,7 +11,7 @@ import HowItWorks from "@/components/PageComponents/HowItWorks";
 // import ViewAllPlans from "@/components/PageComponents/ViewAllPlans";
 // import fetchLoginUser from "@/services/user";
 // import UserAlerts from "@/utils/usersAlert";
-// import { useState } from "react";
+import { useState } from "react";
 // import MarketBased from "@/components/PageComponents/MarketBasedTrades";
 // import AllPlans from "@/components/PageComponents/Investments";
 // import RecentTransactions from "@/components/PageComponents/RecentTransactions";
@@ -22,13 +22,25 @@ import OurPartners from "@/components/PageComponents/OurPartners";
 
 export default function Home() {
   // const [isAlertOpen, setIsAlertOpen] = useState(true)
-  
+  const [buttonHidden, setButtonHidden] = useState(false);
+
+  useEffect(() => {
+    const hideButtonTimeout = setTimeout(() => {
+      setButtonHidden(true);
+    }, 48 * 60 * 60 * 1000); // 48 hours in milliseconds
+
+    return () => {
+      clearTimeout(hideButtonTimeout);
+    };
+  })
 
 
 
   return (
     <>
-    
+    {!buttonHidden && (
+        <button>Assistance</button>
+      )}
     {/* { isAlertOpen && <Alert isOpen={isAlertOpen} setIsOpen={setIsAlertOpen} />} */}
       <main className="flex min-h-screen flex-col overflow-x-hidden bg-[#111]">
         <Carousel />
