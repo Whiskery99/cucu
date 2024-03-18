@@ -11,7 +11,7 @@ import HowItWorks from "@/components/PageComponents/HowItWorks";
 // import ViewAllPlans from "@/components/PageComponents/ViewAllPlans";
 // import fetchLoginUser from "@/services/user";
 // import UserAlerts from "@/utils/usersAlert";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import MarketBased from "@/components/PageComponents/MarketBasedTrades";
 // import AllPlans from "@/components/PageComponents/Investments";
 // import RecentTransactions from "@/components/PageComponents/RecentTransactions";
