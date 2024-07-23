@@ -9,7 +9,7 @@ import Head from 'next/head';
 // const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Fratcht Logistics | Logistics & Parcel delivery at its peak...',
+  title: 'Fracht Logistics | Logistics & Parcel delivery at its peak...',
   description: '',
 
 };
