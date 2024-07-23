@@ -10,15 +10,16 @@ import Head from 'next/head';
 
 export const metadata = {
   title: 'Fracht Logistics | Logistics & Parcel delivery at its peak...',
-  description: '',
-
+  description: 'Efficient logistics and parcel delivery services.',
+  icon: '/logos.png',
+  url: 'https://www.frachtlogistics.com'
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" href="./logo.svg" sizes="any" />
+        <link rel="icon" href="./logos.png" sizes="any" />
         
       </Head>
       <body className="bg-[#111]">
