@@ -6,38 +6,34 @@ import { GoCheckCircleFill } from "react-icons/go";
 
 const OurPartners = () => {
   return (
-    <>
-      <div id="register" className="mx-auto py-20 bg-[#fff] w-full">
-        <div className="mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 container">
-          <div className="text-center">
-            <h1 className="text-2xl md:text-3xl font-semibold lg:mb-0 text-black -tracking-wide px-6 md:px-0">
-              We are <span className="text-[#fd961a]">trusted</span> by major
-              global brands.
-            </h1>
-          </div>
-          <div className="grid grid-cols-3 gap-4 place-items-center md:flex items-center w-full md:justify-center md:gap-10 md:items-center flex-col md:flex-row  mx-auto justify-center text-white px-6">
-            <div className="w-20 md:w-32">
-              <img src="/logis.png" className="object-cover" alt=" Logo" />
+    <section id="register" className="bg-white py-24">
+      <div className="container mx-auto flex flex-col items-center">
+        <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-900 leading-snug mb-12">
+          Trusted by <span className="text-[#fd961a]">global brands</span> worldwide.
+        </h1>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 place-items-center w-full px-6">
+          {[
+            { src: '/logis.png', alt: 'Logis' },
+            { src: '/creati.png', alt: 'Creati' },
+            { src: '/saltos.png', alt: 'Saltos' },
+            { src: '/alea.png', alt: 'Alea' },
+            { src: '/truck.png', alt: 'Truck' },
+            { src: '/land.png', alt: 'Land' },
+          ].map((partner, index) => (
+            <div
+              key={index}
+              className="w-24 md:w-32 lg:w-36 transition-transform transform hover:scale-110"
+            >
+              <img
+                src={partner.src}
+                alt={partner.alt}
+                className="object-contain w-full h-auto drop-shadow-md"
+              />
             </div>
-            <div className="w-20 md:w-32">
-              <img src="/creati.png" className="object-cover" alt=" Logo" />
-            </div>
-            <div className="w-20 md:w-32">
-              <img src="/saltos.png" className="object-cover" alt=" Logo" />
-            </div>
-            <div className="w-20 md:w-32">
-              <img src="/alea.png" className="object-cover" alt=" Logo" />
-            </div>
-            <div className="w-20 md:w-32">
-              <img src="/truck.png" className="object-cover" alt=" Logo" />
-            </div>
-            <div className="w-20 md:w-32">
-              <img src="/land.png" className="object-cover" alt=" Logo" />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

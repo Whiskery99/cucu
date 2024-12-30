@@ -6,57 +6,53 @@ import { GoCheckCircleFill } from "react-icons/go";
 
 const HowItWorks = () => {
   return (
-    <>
-      <div
-        id="register"
-        className="container mx-auto flex flex-col items-center justify-center md:justify-around gap-10 py-20 md:px-40"
-      >
-        <div className="text-center">
-          <p className="text-gray-300 mb-3">Our Operation</p>
-          <h1 className="text-2xl md:text-6xl lg:text-5xl font-bold mb-5 lg:mb-6 text-white -tracking-wide md:w-3/4 lg:3/5">
-            HOW FRACHTLOGISTICS WORKS
-          </h1>
+    <section
+      id="register"
+      className="container mx-auto flex flex-col items-center justify-center gap-16 py-24 px-6 md:px-16 lg:px-32"
+    >
+      <div className="text-center max-w-3xl">
+        <p className="text-orange-400 uppercase tracking-wide mb-4">Our Process</p>
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white">
+          How FrachtLogistics Works
+        </h1>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          We designed our platform to be user-friendly and simple. If you can unlock your phone, you can use our site.
+        </p>
+      </div>
+
+      <div className="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 w-full">
+        <div className="w-full max-w-lg md:max-w-xl">
+          <img
+            src="/how.jpg"
+            className="object-cover rounded-xl shadow-lg"
+            alt="How it works"
+          />
         </div>
-        <div className="flex items-center w-full md:justify-center md:gap-20 md:items-center flex-col md:flex-row  mx-auto justify-center text-white px-6">
-          <div className="w-[380px] md:w-[540px] mb-6">
-            <img src="/how.jpg" className="object-cover rounded-lg" alt=" Logo" />
+
+        <div className="flex flex-col items-start gap-8 max-w-lg">
+          <div className="space-y-6">
+            {[
+              "Package created",
+              "Get tracking number",
+              "Track your package",
+              "Enjoy the process",
+            ].map((step, index) => (
+              <div key={index} className="flex items-center gap-4">
+                <GoCheckCircleFill className="text-green-400 w-6 h-6" />
+                <p className="text-lg text-white font-medium">{step}</p>
+              </div>
+            ))}
           </div>
-          <div className="flex flex-col items-start gap-8 px-4">
-            <p className="text-base font-medium">
-              Our system is programmed in a way that it is easy and simple for
-              everyone to use. If you can unlock your phone, you can use our
-              website. Yes!
-            </p>
-            <div className="flex flex-col space-y-4">
-              <p className="flex items-center gap-2">
-                <GoCheckCircleFill />
-                <span>Package created</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <GoCheckCircleFill />
-                <span>Get tracking number</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <GoCheckCircleFill />
-                <span>Track your package</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <GoCheckCircleFill />
-                <span>Enjoy the process</span>
-              </p>
-            </div>
-            <button
-              className="flex items-center space-x-1 bg-[#fd961a] text-white text-[18px] px-6 py-4 hover:opacity-80 ease-in duration-200 rounded-md"
-              // data-aos="fade-up"
-              // data-aos-delay="800"
-            >
-              <a href="/track-parcel">Track Parcel</a>
-              <TbArrowUpRight className="w-6 h-6" />
-            </button>
-          </div>
+
+          <button
+            className="flex items-center gap-3 bg-orange-500 text-white font-semibold text-lg px-8 py-4 rounded-lg hover:bg-orange-600 transition-all ease-in-out duration-200"
+          >
+            <a href="/track-parcel">Track Your Parcel</a>
+            <TbArrowUpRight className="w-6 h-6" />
+          </button>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

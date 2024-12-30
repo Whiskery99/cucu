@@ -1,11 +1,8 @@
-"use client"
+"use client";
 
-import Footer from "@/components/Footer"
-import BannerComponent from "@/components/PageComponents/BannerComponent"
-import { HomeIcon, MapIcon } from "lucide-react";
+import Footer from "@/components/Footer";
+import { ContactIcon, HomeIcon, MapIcon } from "lucide-react";
 import { useState } from "react";
-
-
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,10 +13,6 @@ export default function Contact() {
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleMessageChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -37,82 +30,101 @@ export default function Contact() {
 
       if (response.ok) {
         console.log('Email sent successfully!');
-        // Optionally, reset the form or show a success message
       } else {
         console.error('Error sending email:', response.statusText);
-        // Handle error, show error message, etc.
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      // Handle error, show error message, etc.
     }
   };
-
-
 
   return (
     <>
       <div>
-        <div className="h-[18vh]  bg-[#fd961a] flex flex-col items-center gap-6 justify-center overflow-hidden">
-          {/* <BannerComponent title="HOME / TRACK PARCEL" /> */}
-          <p className="text-[#000] text-base mt-3">Contact</p>
-          <h1 className="text-white text-2xl">Contact Us</h1>
-          <div className="w-18 bg-[#fff] h-4"></div>
+        <div className="h-[18vh] bg-[#fd961a] flex flex-col items-center justify-center text-center overflow-hidden">
+          <p className="text-black text-sm md:text-base mt-3">Contact</p>
+          <h1 className="text-white text-3xl font-semibold">Get in Touch</h1>
+          <div className="w-16 h-1 bg-white mt-2"></div>
         </div>
-        <div className="w-full px-4 grid grid-cols-1 md:grid-cols-2 mx-auto items-center md:items-center  gap-3 justify-center my-8 md:mt-10">
-          <div className="bg-[#fff]">
-            <div className="bg-[#fd961a] w-full py-8 px-5">
-              <p className="text-xl text-black">Get in touch!</p>
+
+        <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div className="bg-[#fd961a] py-6 px-8 text-center">
+              <p className="text-2xl font-semibold text-black">Send us a Message</p>
             </div>
-            <form onSubmit={handleSubmit} className="space-y-6 p-4 mt-4">
-              <div className="flex flex-col gap-2 items-start w-full">
-                <label className="text-black">Name</label>
-                <input id="name"
+            <form onSubmit={handleSubmit} className="p-8 space-y-6">
+              <div className="flex flex-col gap-2">
+                <label className="text-gray-700 font-medium">Name</label>
+                <input
+                  id="name"
                   name="name"
                   value={formData.name}
-                  onChange={handleChange} className="text-zinc-800 border-[0.5px] transistion-all ease-in-out duration-500 border-gray-300 focus:border-gray-700 rounded-lg px-4 py-3 w-full" type="text" placeholder="Enter your name" required />
+                  onChange={handleChange}
+                  className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#fd961a] focus:border-transparent"
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                />
               </div>
-              <div className="flex flex-col gap-2 items-start w-full">
-                <label className="text-black">Message</label>
-                <textarea id="message"
+              <div className="flex flex-col gap-2">
+                <label className="text-gray-700 font-medium">Message</label>
+                <textarea
+                  id="message"
                   name="message"
-                  rows="8"
-                  value={formData.name}
-                  onChange={handleMessageChange} className="text-zinc-800 border-[0.5px] transistion-all ease-in-out duration-500 border-gray-300 focus:border-gray-700 rounded-lg px-4 py-3 w-full" type="text" placeholder="Enter your message" required />
+                  rows="6"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#fd961a] focus:border-transparent"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
               </div>
-              <button type="submit" className="disabled:opacity-50 flex items-center justify-center bg-[#fd961a] px-6 py-2 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md w-full">Submit</button>
+              <button
+                type="submit"
+                className="w-full bg-[#fd961a] text-white py-3 rounded-lg text-lg font-medium hover:bg-[#e68400] transition-all"
+              >
+                Send Message
+              </button>
             </form>
           </div>
-          <div className="flex flex-col gap-6">
-            <div className="bg-[#fd961a] p-5 flex flex-col md:flex-row items-center text-black gap-4 w-full">
-              <div className="flex justify-around items-center gap-4">
-                <div className="bg-white p-6 rounded-full">
-                  <HomeIcon />
-                </div>
-                <h1>Opening Hours</h1>
+
+          <div className="flex flex-col gap-8">
+            <div className="bg-[#fd961a] p-6 flex items-center gap-6 rounded-lg shadow-md">
+              <div className="bg-white p-4 rounded-full shadow-md">
+                <HomeIcon className="w-6 h-6 text-[#fd961a]" />
               </div>
-              <div className="flex flex-col gap-1 items-start">
-                <p>Monday - Friday</p>
-                <p>9AM - 6PM</p>
+              <div>
+                <h2 className="text-xl font-semibold text-black">Opening Hours</h2>
+                <p className="text-gray-700">Monday - Friday</p>
+                <p className="text-gray-700">9 AM - 6 PM</p>
               </div>
             </div>
-            <div className="bg-[#fd961a] p-5 flex flex-col md:flex-row items-center text-black gap-4 w-full">
-              <div className="flex justify-around items-center gap-4">
-                <div className="bg-white p-6 rounded-full">
-                  <MapIcon />
-                </div>
-                <h1>Address</h1>
+
+            <div className="bg-[#fd961a] p-6 flex items-center gap-6 rounded-lg shadow-md">
+              <div className="bg-white p-4 rounded-full shadow-md">
+                <MapIcon className="w-6 h-6 text-[#fd961a]" />
               </div>
-              <div className="flex flex-col gap-1 items-start">
-                <p>467 Stutler Lane, Altoona</p>
-                <p>PA 16602</p>
+              <div>
+                <h2 className="text-xl font-semibold text-black">Our Address</h2>
+                <p className="text-gray-700">467 Stutler Lane</p>
+                <p className="text-gray-700">Altoona, PA 16602</p>
+              </div>
+            </div>
+            <div className="bg-[#fd961a] p-6 flex items-center gap-6 rounded-lg shadow-md">
+              <div className="bg-white p-4 rounded-full shadow-md">
+                <ContactIcon className="w-6 h-6 text-[#fd961a]" />
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold text-black">WhatsApp Contact</h2>
+                <p className="text-gray-700">
+                  <a href="https://wa.me/+13044390475">+13044390475</a>
+                </p>
               </div>
             </div>
           </div>
-
         </div>
       </div>
       <Footer />
     </>
-  )
+  );
 }
