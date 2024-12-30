@@ -48,7 +48,7 @@ export default function Footer() {
                     <div>
                         <h2 className="text-lg font-semibold text-[#fd961a] mb-4">Contact Us</h2>
                         <p className="text-gray-400 text-sm mb-3">Manchester M14 5td 6 Wilmslow Road, Rusholme</p>
-                        <p className="text-gray-400 text-sm mb-3">Phone: <span className="text-[#fd961a]"><a href="https://wa.me/+13044390475">+12737474844</a></span></p>
+                        <p className="text-gray-400 text-sm mb-3">Phone: <span className="text-[#fd961a]"><a href="https://wa.me/+13044390475" target="_blank">+13044390475</a></span></p>
                         <p className="text-gray-400 text-sm">
                             Email: <a href="mailto:support@frachtlogistics.com" className="text-[#fd961a] hover:underline">support@frachtlogistics.com</a>
                         </p>
