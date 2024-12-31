@@ -22,8 +22,8 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="./logos.png" sizes="any" />
         
       </Head>
-      <body className="bg-[#111]">
-        <GlobalState>
+      <ody className="bg-[#111]">
+        <lobalState>
           <Navbar />
           <main className="flex flex-col min-h-screen">
             {children}
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           {/* <Footer /> */}
         </GlobalState>
         {/* // <script src="//code.tidio.co/xu5x80n1qpwxrypqeeochchyeh4jsqwm.js" async></script> */}
-      </body>
+      </ody>
     </html>
   );
 }
